@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "ridlocker",
+  "version": "1.0-SNAPSHOT",
+  "name": "Ridlocker",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/ridlocker/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.jdanieldavis.ridlocker.client.RidlockerClient"
+    ],
+    "main": [
+      "org.jdanieldavis.ridlocker.Ridlocker"
+    ]
+  },
+  "mixins": [
+    "ridlocker.mixins.json",
+    {
+      "config": "ridlocker.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.3",
+    "fabric": "*",
+    "minecraft": "1.21.1"
+  }
+}
